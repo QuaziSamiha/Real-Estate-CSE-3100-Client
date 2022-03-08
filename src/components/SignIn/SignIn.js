@@ -67,21 +67,27 @@ const SignIn = () => {
         <div>
             <Navbar />
             this is sign in
-            <div>
-                {
-                    user.isSignedIn ?
-                        <button onClick={handleSignOut}>sign up</button>
-                        :
-                        <button onClick={handleSignIn} >sign in with google</button>
-                }
-                {
-                    user.isSignedIn ?
-                        <div>
-                            <h2>Welcome {user.userName}</h2>
-                        </div>
-                        :
-                        <p>Not Signed in</p>
-                }
+            <div className='pt-24 md:pt-44 w-11/12 flex justify-center'>
+                <div className='bg-teal-100 px-8'>
+                    <div>
+                        {
+                            user.isSignedIn ?
+                                <button className='bg-teal-700 text-white text-xl font-bold px-24 py-6 mx-24 mt-16 mb-12' onClick={handleSignOut}>sign out</button>
+                                :
+                                <button className='bg-teal-700 text-white text-xl font-bold px-24 py-6 mx-24 mt-16 mb-12' onClick={handleSignIn} >sign in with google</button>
+                        }
+                    </div>
+                    <div>
+                        {
+                            user.isSignedIn ?
+                                <div>
+                                    <h2 className='text-center font-bold mt-4 mb-8 text-lg text-teal-700'>Welcome {user.userName}</h2>
+                                </div>
+                                :
+                                <span></span>
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     );

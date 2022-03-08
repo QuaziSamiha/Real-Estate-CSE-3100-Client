@@ -10,6 +10,7 @@ import PageNotFound from './components/PageNotFound/PageNotFound';
 import SignIn from './components/SignIn/SignIn';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PropertyDetail from './components/Home/PropertyDetail/PropertyDetail';
 
 export const UserContext = createContext();
 
@@ -26,8 +27,9 @@ function App() {
             <Route path="/home" element={<Home />} />
             {/* <Route path="/aboutUs" element={<AboutUs />} /> */}
             <Route path="/signIn" element={<SignIn />} />
-            {/* <Route path='/admin' element={<Admin />} /> */}
-            <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
+            <Route path='/propertyDetail' element={<PrivateRoute><PropertyDetail /></PrivateRoute>} />
+            <Route path='/admin' element={<Admin />} />
+            {/* <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} /> */}
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
