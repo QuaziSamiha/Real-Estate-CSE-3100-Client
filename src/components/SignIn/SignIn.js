@@ -37,6 +37,7 @@ const SignIn = () => {
                 };
                 setUser(signedInUser);
                 setLoggedInUser(signedInUser);
+                // console.log(signedInUser);
                 navigate(location.state.from);
             })
             .catch((error) => {
@@ -44,6 +45,7 @@ const SignIn = () => {
                 console.log(errorMessage);
             });
     }
+    // console.log(loggedInUser.userEmail);
 
     const handleSignOut = () => {
         // console.log('handled sign out');

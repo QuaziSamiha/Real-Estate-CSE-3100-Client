@@ -29,7 +29,7 @@ const Navbar = () => {
                     <Link to='/signIn'>Sign in</Link>
                 </li>
                 <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
-                    <Link to='/admin'>Admin</Link>
+                    <Link to='/dashboard'>Dashboard</Link>
                 </li>
             </ul>
 
@@ -56,8 +56,8 @@ function SideMenu() {
                 <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
                     <Link to='/signIn'>Sign in</Link>
                 </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
-                    <Link to='/admin'>Admin</Link>
+                <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
+                    <Link to='/dashboard'>Dashboard</Link>
                 </li>
             </ul>
         </div>
