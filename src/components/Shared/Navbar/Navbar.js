@@ -23,7 +23,7 @@ const Navbar = () => {
                     <Link to='/home'>Home</Link>
                 </li>
                 <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
-                    <Link to='/aboutUs'>About</Link>
+                    <Link to='/aboutUs'>About Us</Link>
                 </li>
                 <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
                     <Link to='/signIn'>Sign in</Link>
@@ -50,9 +50,9 @@ function SideMenu() {
                 <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 mb-1 mt-3'>
                     <Link to='/home'>Home</Link>
                 </li>
-                {/* <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
-                    <Link to='/aboutUs'>About</Link>
-                </li> */}
+                <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
+                    <Link to='/aboutUs'>About Us</Link>
+                </li>
                 <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
                     <Link to='/signIn'>Sign in</Link>
                 </li>

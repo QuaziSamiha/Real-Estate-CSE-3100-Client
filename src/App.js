@@ -11,6 +11,7 @@ import SignIn from './components/SignIn/SignIn';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PropertyDetail from './components/Home/PropertyDetail/PropertyDetail';
+import AboutUS from './components/AboutUS/AboutUS/AboutUS';
 
 export const UserContext = createContext();
 
@@ -19,13 +20,13 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    <div className="App">
+    <div>
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/home" element={<Home />} />
-            {/* <Route path="/aboutUs" element={<AboutUs />} /> */}
+            <Route path="/aboutUs" element={<AboutUS />} />
             <Route path="/signIn" element={<SignIn />} />
             <Route path='/propertyDetail' element={<PrivateRoute><PropertyDetail /></PrivateRoute>} />
             <Route path='/admin' element={<Admin />} />

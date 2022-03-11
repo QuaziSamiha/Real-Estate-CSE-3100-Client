@@ -2,16 +2,14 @@ import React from 'react';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
 
-const PropertyDetail = () => {
+const AboutUS = () => {
     return (
         <div>
             <Navbar />
-            <div className='pt-24'>
-                <h1>Details of property</h1>
-            </div>
+            <h1>this is about us</h1>
             <Footer />
         </div>
     );
 };
 
-export default PropertyDetail;
+export default AboutUS;

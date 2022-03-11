@@ -63,7 +63,7 @@ const Properties = () => {
         <section className='pt-32'>
             <div className='border drop-shadow-md'>
                 <h1 className='text-center text-teal-700 text-3xl font-bold m-8'>HOT PROPERTIES</h1>
-                <div className='grid gap-4 grid-cols-1 md:grid-cols-3'>
+                <div className='grid gap-4 grid-cols-1 md:grid-cols-3 pb-16'>
                     {
                         properties.map((property, index) =>
                             <Property
