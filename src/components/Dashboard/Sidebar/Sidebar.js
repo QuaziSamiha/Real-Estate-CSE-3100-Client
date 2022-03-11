@@ -64,7 +64,7 @@ const Sidebar = () => {
                                 </li>
                             </div>
                         </Link>
-                        <Link to='/'>
+                        <Link to='/addProperty'>
                             <div className='flex'>
                                 <FontAwesomeIcon icon={faAdd} />
                                 <li className='list-none hover:bg-teal-100 hover:text-teal-700'>

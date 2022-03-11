@@ -3,29 +3,31 @@ import { useNavigate } from 'react-router-dom';
 
 const Property = (props) => {
 
-    const { img, name, price, size, roomNo, bathroom } = props.property;
+    const { _id, propertyName, propertyPrice, propertySize, propertyRoomNo, propertyBathroomNo } = props.property;
+    // const { img, name, price, size, roomNo, bathroom } = props.property;
+    // console.log(props);
 
     const navigate = useNavigate();
 
     return (
         <div className='border mx-4 my-4 p-4'>
             <div className='w-2/3 mx-auto'>
-                <img src={img} alt="" />
+                {/* <img src={img} alt="" /> */}
             </div>
             <div className='mx-auto w-3/4'>
                 <div className='py-4'>
                     <div className='flex justify-between px-8  text-teal-700'>
                         <div>
-                            <h1 className='text-lg font-bold'>{name}</h1>
+                            <h1 className='text-lg font-bold'>{propertyName}</h1>
                         </div>
                         <div>
-                            <p className='font-semibold'>{price}</p>
+                            <p className='font-semibold'>${propertyPrice}</p>
                         </div>
                     </div>
                     <div className='flex justify-between md:text-sm px-8 mt-4 text-teal-700'>
-                        <div><p>{size}</p></div>
-                        <div><p>{roomNo}</p></div>
-                        <div><p>{bathroom}</p></div>
+                        <div><p>{propertySize} sq feet</p></div>
+                        <div><p>{propertyRoomNo} Bedrooms</p></div>
+                        <div><p>{propertyBathroomNo} Bathrooms</p></div>
                     </div>
                 </div>
 

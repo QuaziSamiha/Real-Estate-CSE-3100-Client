@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import property1 from '../../../images/properties1.jpg';
 import property2 from '../../../images/properties2.jpg';
 import property3 from '../../../images/properties3.jpg';
@@ -9,56 +9,71 @@ import Property from '../Property/Property';
 
 const Properties = () => {
 
-    const properties = [
-        {
-            img: property1,
-            name: 'PROPERTIES01',
-            price: '$199',
-            size: '1200 sq ft',
-            roomNo: '4 Bedrooms',
-            bathroom: '2 Bathrooms'
-        },
-        {
-            img: property2,
-            name: 'PROPERTIES01',
-            price: '$199',
-            size: '1200 sq ft',
-            roomNo: '4 Bedrooms',
-            bathroom: '2 Bathrooms'
-        },
-        {
-            img: property3,
-            name: 'PROPERTIES01',
-            price: '$199',
-            size: '1200 sq ft',
-            roomNo: '4 Bedrooms',
-            bathroom: '2 Bathrooms'
-        },
-        {
-            img: property4,
-            name: 'PROPERTIES01',
-            price: '$199',
-            size: '1200 sq ft',
-            roomNo: '4 Bedrooms',
-            bathroom: '2 Bathrooms'
-        },
-        {
-            img: property5,
-            name: 'PROPERTIES01',
-            price: '$199',
-            size: '1200 sq ft',
-            roomNo: '4 Bedrooms',
-            bathroom: '2 Bathrooms'
-        },
-        {
-            img: property6,
-            name: 'PROPERTIES01',
-            price: '$199',
-            size: '1200 sq ft',
-            roomNo: '4 Bedrooms',
-            bathroom: '2 Bathrooms'
-        }
-    ]
+
+    const [properties, setProperties] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3144/allProperties')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setProperties(data);
+            })
+    }, [])
+
+    // const properties = [
+    //     {
+    //         img: property1,
+    //         name: 'PROPERTIES01',
+    //         price: '$199',
+    //         size: '1200 sq ft',
+    //         roomNo: '4 Bedrooms',
+    //         bathroom: '2 Bathrooms'
+    //     },
+    //     {
+    //         img: property2,
+    //         name: 'PROPERTIES01',
+    //         price: '$199',
+    //         size: '1200 sq ft',
+    //         roomNo: '4 Bedrooms',
+    //         bathroom: '2 Bathrooms'
+    //     },
+    //     {
+    //         img: property3,
+    //         name: 'PROPERTIES01',
+    //         price: '$199',
+    //         size: '1200 sq ft',
+    //         roomNo: '4 Bedrooms',
+    //         bathroom: '2 Bathrooms'
+    //     },
+    //     {
+    //         img: property4,
+    //         name: 'PROPERTIES01',
+    //         price: '$199',
+    //         size: '1200 sq ft',
+    //         roomNo: '4 Bedrooms',
+    //         bathroom: '2 Bathrooms'
+    //     },
+    //     {
+    //         img: property5,
+    //         name: 'PROPERTIES01',
+    //         price: '$199',
+    //         size: '1200 sq ft',
+    //         roomNo: '4 Bedrooms',
+    //         bathroom: '2 Bathrooms'
+    //     },
+    //     {
+    //         img: property6,
+    //         name: 'PROPERTIES01',
+    //         price: '$199',
+    //         size: '1200 sq ft',
+    //         roomNo: '4 Bedrooms',
+    //         bathroom: '2 Bathrooms'
+    //     }
+    // ]
+
+    // console.log(properties);
+
     return (
         <section className='pt-32'>
             <div className='border drop-shadow-md'>

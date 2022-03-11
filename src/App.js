@@ -14,6 +14,7 @@ import PropertyDetail from './components/Home/PropertyDetail/PropertyDetail';
 import AboutUS from './components/AboutUS/AboutUS/AboutUS';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
+import AddProperty from './components/Admin/AddProperty/AddProperty';
 
 export const UserContext = createContext();
 
@@ -35,6 +36,8 @@ function App() {
             {/* <Route  path='/dashboard' element={<Dashboard />}/> */}
             <Route path='/dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path='/addAdmin' element={<AddAdmin />} />
+            <Route path='/addProperty' element={<AddProperty />} />
+
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
