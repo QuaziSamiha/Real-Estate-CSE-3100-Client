@@ -12,7 +12,7 @@ const Sidebar = () => {
 
     // console.log(loggedInUser.userEmail);
     useEffect(() => {
-        fetch('http://localhost:3144/isAdmin', {
+        fetch('https://shielded-stream-87364.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.userEmail })
@@ -72,7 +72,7 @@ const Sidebar = () => {
                                 </li>
                             </div>
                         </Link>
-                        <Link to='/'>
+                        <Link to='/deleteProperty'>
                             <div className='flex'>
                                 <FontAwesomeIcon icon={faDeleteLeft} />
                                 <li className='list-none hover:bg-teal-100 hover:text-teal-700'>

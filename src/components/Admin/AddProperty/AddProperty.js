@@ -10,7 +10,7 @@ const AddProperty = () => {
     const [imageURL, setImageURL] = useState(null);
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
 
         const propertyDetail = {
             propertyName: data.propertyName,
@@ -20,8 +20,8 @@ const AddProperty = () => {
             propertyBathroomNo: data.bathroomNo,
             propertyImage: imageURL
         }
-
-        fetch('http://localhost:3144/addNewProperty', {
+        // console.log(imageURL);
+        fetch('https://shielded-stream-87364.herokuapp.com/addNewProperty', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,28 +29,28 @@ const AddProperty = () => {
             body: JSON.stringify(propertyDetail)
         })
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 setAddProperty(res.ok);
             })
 
     };
 
     const handleImageUpload = event => {
+        console.log('hello')
         const imageData = new FormData();
         imageData.set('key', '815f1fbed42fe675d6388d26293456cb');
         imageData.append('image', event.target.files[0]);
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
+                // console.log( 'helllo',response);
                 setImageURL(response.data.data.display_url);
-                console.log(response.data.data.display_url);
+                // console.log(response.data.data.display_url);
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
-
-
 
     return (
         <>

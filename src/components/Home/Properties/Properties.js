@@ -13,7 +13,7 @@ const Properties = () => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3144/allProperties')
+        fetch('https://shielded-stream-87364.herokuapp.com/allProperties')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
