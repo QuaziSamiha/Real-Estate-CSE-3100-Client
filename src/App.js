@@ -30,7 +30,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/aboutUs" element={<AboutUS />} />
+            {/* <Route path="/aboutUs" element={<AboutUS />} /> */}
             <Route path="/signIn" element={<SignIn />} />
             <Route path='/propertyDetail' element={<PrivateRoute><PropertyDetail /></PrivateRoute>} />
             {/* <Route path='/admin' element={<Admin />} /> */}

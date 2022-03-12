@@ -1,5 +1,5 @@
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
-import { faAdd, faDeleteLeft, faShower, faSpellCheck, faUserEdit } from '@fortawesome/free-solid-svg-icons';
+import { faAdd, faCheckSquare, faListUl, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -25,22 +25,22 @@ const Sidebar = () => {
     }, [])
 
     return (
-        <div className='pt-16'>
+        <div className='h-96 text-teal-100 pt-16 sm:w-3/6 md:w-2/6 bg-teal-900 flex justify-center'>
             {
                 isAdmin === false ?
-                    <div className=''>
+                    <div>
                         <Link to='/'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faShower} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faListUl} />
+                                <li className='list-none'>
                                     All Properties
                                 </li>
                             </div>
                         </Link>
                         <Link to='/'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faSpellCheck} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faCheckSquare} />
+                                <li className='list-none'>
                                     My Selections
                                 </li>
                             </div>
@@ -49,41 +49,41 @@ const Sidebar = () => {
                     :
                     <div>
                         <Link to='/addAdmin'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faAdd} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faAdd} />
+                                <li className='list-none'>
                                     Add Admin
                                 </li>
                             </div>
                         </Link>
                         <Link to='/'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faShower} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faListUl} />
+                                <li className='list-none'>
                                     All Properties
                                 </li>
                             </div>
                         </Link>
                         <Link to='/addProperty'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faAdd} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faAdd} />
+                                <li className='list-none'>
                                     Add Property
                                 </li>
                             </div>
                         </Link>
                         <Link to='/deleteProperty'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faDeleteLeft} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faTrashCan} />
+                                <li className='list-none'>
                                     Delete Property
                                 </li>
                             </div>
                         </Link>
                         <Link to='/'>
-                            <div className='flex'>
-                                <FontAwesomeIcon icon={faEdit} />
-                                <li className='list-none hover:bg-teal-100 hover:text-teal-700'>
+                            <div className='flex py-2 px-16 m-2 rounded hover:bg-teal-100 hover:text-teal-700'>
+                                <FontAwesomeIcon className='pt-1 pr-1' icon={faEdit} />
+                                <li className='list-none'>
                                     Edit Property
                                 </li>
                             </div>

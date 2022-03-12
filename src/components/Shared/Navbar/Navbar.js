@@ -12,29 +12,29 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='top-0 fixed w-screen h-14 px-4 sm:px-8 bg-teal-300 flex flex-row justify-between text-white font-bold'>
+        <nav className='top-0 fixed w-screen h-14 px-4 sm:px-8 bg-teal-900 flex flex-row justify-between text-white font-bold'>
             <div>
-                <h3 className='text-teal-900 tracking-wide flex flex-row p-3 text-lg md:text-xl'>
+                <h3 className='text-teal-100 tracking-wide flex flex-row p-3 text-lg md:text-xl'>
                     SFR AGENCY
                 </h3>
             </div>
             <ul className='hidden lg:flex lg:flex-row justify-between tracking-wider lg:py-2'>
-                <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
+                <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded p-2 mx-2'>
                     <Link to='/home'>Home</Link>
                 </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
+                {/* <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded p-2 mx-2'>
                     <Link to='/aboutUs'>About Us</Link>
-                </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
+                </li> */}
+                <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded p-2 mx-2'>
                     <Link to='/signIn'>Sign in</Link>
                 </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
+                <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded p-2 mx-2'>
                     <Link to='/dashboard'>Dashboard</Link>
                 </li>
             </ul>
 
             <button onClick={() => { showSideMenu() }}
-                className='lg:hidden p-3 text-teal-900'>
+                className='lg:hidden p-3 text-teal-100'>
                 {(isSideMenuOpen) ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
             </button>
             {(isSideMenuOpen) ? SideMenu() : ''}
@@ -45,18 +45,18 @@ const Navbar = () => {
 
 function SideMenu() {
     return (
-        <div className='lg:hidden fixed h-screen w-3/4 bg-teal-300 top-14'>
+        <div className='lg:hidden fixed h-screen w-3/4 bg-teal-900 top-14'>
             <ul className='flex flex-col items-center tracking-wide font-bold'>
-                <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 mb-1 mt-3'>
+                <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded px-20 py-2 mb-1 mt-3'>
                     <Link to='/home'>Home</Link>
                 </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
+                {/* <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded px-20 py-2 my-1'>
                     <Link to='/aboutUs'>About Us</Link>
-                </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 px-20 py-2 my-1'>
+                </li> */}
+                <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded px-20 py-2 my-1'>
                     <Link to='/signIn'>Sign in</Link>
                 </li>
-                <li className='hover:bg-teal-100 hover:text-teal-700 p-2 mx-2'>
+                <li className='hover:bg-teal-100 hover:text-teal-700 text-teal-100 hover:rounded p-2 mx-2'>
                     <Link to='/dashboard'>Dashboard</Link>
                 </li>
             </ul>

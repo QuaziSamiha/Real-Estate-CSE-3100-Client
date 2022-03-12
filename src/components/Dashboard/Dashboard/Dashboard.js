@@ -7,7 +7,7 @@ const Dashboard = () => {
     return (
         <div className=''>
             <Navbar />
-            <section className='container mx-auto pt-24'>
+            <section className='min-h-screen container pt-32'>
                 <Sidebar />
             </section>
             <Footer />

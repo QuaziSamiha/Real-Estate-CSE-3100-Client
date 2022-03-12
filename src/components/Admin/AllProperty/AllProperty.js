@@ -18,11 +18,13 @@ const AllProperty = () => {
     return (
         <>
             <Navbar />
-            <div className='mt-24'>
-                <h1>All Property</h1>
-                {
-                    allProperties.map((property, index) => <DeleteProperty key={index} property={property} />)
-                }
+            <div className='border drop-shadow-md'>
+                <h1 className='mt-32 text-center text-teal-700 text-2xl font-bold'>ALL PROPERTIES</h1>
+                <div className='grid gap-4 grid-cols-1 md:grid-cols-3 pb-16'>
+                    {
+                        allProperties.map((property, index) => <DeleteProperty key={index} property={property} />)
+                    }
+                </div>
             </div>
         </>
     );
