@@ -9,7 +9,7 @@ const AddAdmin = () => {
     const onSubmit = data => {
         console.log(data);
 
-        fetch('https://shielded-stream-87364.herokuapp.com/addAdmin', {
+        fetch('http://localhost:3144/addAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

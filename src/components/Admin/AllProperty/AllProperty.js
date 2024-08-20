@@ -8,13 +8,13 @@ const AllProperty = () => {
 
     // const uri = http://localhost:3144/allProperties;
     useEffect(() => {
-        fetch('https://shielded-stream-87364.herokuapp.com/allProperties')
+        fetch('http://localhost:3144/allProperties')
             .then(res => res.json())
             .then(data => {
                 setAllProperties(data);
             })
     }, [])
-    // https://shielded-stream-87364.herokuapp.com
+    // http://localhost:3144
     return (
         <>
             <Navbar />

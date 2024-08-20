@@ -13,7 +13,7 @@ const Properties = () => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        fetch('https://shielded-stream-87364.herokuapp.com/allProperties')
+        fetch('http://localhost:3144/allProperties')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -72,7 +72,7 @@ const Properties = () => {
     //     }
     // ]
 
-    // console.log(properties);
+    console.log(properties);
 
     return (
         <section className='pt-32'>

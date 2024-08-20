@@ -22,7 +22,7 @@ const AddProperty = () => {
         }
         // console.log(imageURL);
 
-        fetch('https://shielded-stream-87364.herokuapp.com/addNewProperty', {
+        fetch('http://localhost:3144/addNewProperty', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

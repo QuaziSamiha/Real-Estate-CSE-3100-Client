@@ -11,7 +11,7 @@ const DeleteProperty = (props) => {
         console.log(propertyId);
         // const uri= `http://localhost:3144/deleteProperty/${propertyId}`;
 
-        fetch(`https://shielded-stream-87364.herokuapp.com/deleteProperty/${propertyId}`, {
+        fetch(`http://localhost:3144/deleteProperty/${propertyId}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -21,7 +21,7 @@ const DeleteProperty = (props) => {
                 setDeleteProperty(true);
             })
     }
-    // https://shielded-stream-87364.herokuapp.com
+    // http://localhost:3144
     return (
         <div>
             {
